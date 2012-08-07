@@ -244,6 +244,9 @@ XAUDIO2_OpenDevice(_THIS, const char *devname, int iscapture)
 
 	static IXAudio2VoiceCallback callbacks = { &callbacks_vtable };
 
+	// add WIN_CoInitialize() and WIN_CoUninitialize here;
+	// to avoid XAudio2Create return hr	0x800401f0 ÉÐÎ´µ÷ÓÃ CoInitialize;
+
     if (iscapture) {
         SDL_SetError("XAudio2: capture devices unsupported.");
         return 0;
