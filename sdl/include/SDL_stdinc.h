@@ -72,6 +72,7 @@
 # include <ctype.h>
 #endif
 #ifdef HAVE_MATH_H
+#define _USE_MATH_DEFINES
 # include <math.h>
 #endif
 #if defined(HAVE_ICONV) && defined(HAVE_ICONV_H)
